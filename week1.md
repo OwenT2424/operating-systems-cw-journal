@@ -1,7 +1,5 @@
-Workstation: Linux Mint (Desktop VM)
+# Week 1 – System Planning & Distribution Selection
 
-Server: Ubuntu Server (Headless / No GUI)
+## 1. System Architecture Overview
 
-My workstation is Linux Mint (desktop) and my server is Ubuntu Server running headless.
 
-Both systems are connected via a VirtualBox host-only network to keep testing isolated.
