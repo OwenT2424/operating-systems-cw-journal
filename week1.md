@@ -69,11 +69,85 @@ administration, scripting, and monitoring tasks performed via SSH.
 
 <img width="1651" height="868" alt="Screenshot 2025-12-20 010646" src="https://github.com/user-attachments/assets/1cbea351-f24b-42b1-b570-a6cce50cc611" />
 
-Linux Mint desktop workstation running inside VirtualBox. This system is
-used as the administrative workstation for SSH access, monitoring, scripting, and
-documentation throughout the coursework.
+For this coursework, a Linux desktop virtual machine running Linux Mint was selected as
+the workstation system. This workstation provides a dedicated environment for remote
+administration, monitoring, and documentation tasks.
 
-For this coursework, Option A was selected: a Linux desktop virtual machine running
-Linux Mint. This workstation provides a dedicated environment for remote administration,
-monitoring, and documentation tasks.
+Using a Linux-based workstation ensures native support for SSH, command-line tools, and
+scripting utilities required throughout the coursework. Linux Mint offers a stable and
+user-friendly desktop environment, allowing focus on server administration rather than
+workstation configuration complexity.
+
+Separating the workstation from the server system reflects industry-standard practice,
+where administrators manage headless servers remotely rather than directly interacting
+with the server console.
+
+## 4. Network Configuration Documentation
+
+<img width="626" height="474" alt="Screenshot 2025-12-20 011933" src="https://github.com/user-attachments/assets/84261600-1806-4584-93ec-a58479abed71" />
+<img width="634" height="470" alt="Screenshot 2025-12-20 011924" src="https://github.com/user-attachments/assets/15d0c1b3-c9b3-42a2-a0df-8e89d0cf0234" />
+
+<img width="628" height="478" alt="Screenshot 2025-12-20 012034" src="https://github.com/user-attachments/assets/4ec39ca4-fa88-4ca0-8506-9344e4e72ce3" />
+<img width="628" height="470" alt="Screenshot 2025-12-20 012020" src="https://github.com/user-attachments/assets/911def0e-29c9-4f78-9de6-9112cff22a61" />
+
+Both the Linux Mint workstation and the Ubuntu Server were configured with two network
+adapters. The first adapter uses NAT to provide internet access for system updates and
+package installation. The second adapter uses a VirtualBox host-only network, creating a
+private and isolated network between the two virtual machines.
+
+This configuration allows secure communication between the workstation and server while
+ensuring all administration and testing remain contained within the virtual environment.
+
+<img width="1304" height="681" alt="Screenshot 2025-12-20 013735" src="https://github.com/user-attachments/assets/a9cfb0da-4d93-44ba-a333-86d98159848c" />
+
+The `ip addr` command was used on the Linux Mint workstation to display network
+interfaces and assigned IP addresses. The output shows two active interfaces: one
+providing internet access via NAT and a second interface assigned a private IP address
+by the VirtualBox host-only network.
+
+The private IP address confirms correct network configuration and enables direct,
+isolated communication with the Ubuntu Server for remote administration tasks.
+
+<img width="1339" height="705" alt="Screenshot 2025-12-20 014345" src="https://github.com/user-attachments/assets/37fd643d-538a-44fe-ba36-751e571eff24" />
+
+The `ip addr` command was executed on the Ubuntu Server to display network interfaces
+and IP configuration. The output shows two active interfaces: one using NAT to provide
+internet access and a second interface assigned a private IP address by the VirtualBox
+host-only network.
+
+The server was assigned a private IP address within the same subnet as the Linux Mint
+workstation, enabling secure and isolated communication for remote administration tasks.
+
+## 5. Server System Specifications
+
+<img width="1102" height="40" alt="Screenshot 2025-12-20 014723" src="https://github.com/user-attachments/assets/8debdad3-6856-43bc-9c47-5255d481a1a2" />
+
+The `uname -a` command was used to display kernel and system information for the Ubuntu
+Server. This output confirms the Linux kernel version, system architecture, and Ubuntu
+kernel build currently in use, providing a baseline reference for the server environment.
+
+<img width="670" height="71" alt="Screenshot 2025-12-20 014839" src="https://github.com/user-attachments/assets/6673ce1c-f5c8-4cd7-a62f-316466f3c371" />
+
+The `free -h` command was used to display system memory usage in a human-readable format.
+The output shows total, used, and available memory on the Ubuntu Server, providing a
+baseline overview of system capacity prior to performance testing and monitoring.
+
+<img width="426" height="121" alt="Screenshot 2025-12-20 015015" src="https://github.com/user-attachments/assets/19755ef4-9cd2-440c-897f-15c0fc1b2b17" />
+
+The `df -h` command was used to display disk usage across mounted filesystems. The output
+shows available and used storage space on the Ubuntu Server, providing a baseline
+reference for disk capacity prior to application deployment and testing.
+
+<img width="330" height="111" alt="Screenshot 2025-12-20 015112" src="https://github.com/user-attachments/assets/19c64cd6-fac5-4c3e-9d5e-eb25768e3b0a" />
+
+The `lsb_release -a` command was used to confirm the Linux distribution and version
+running on the server. The output verifies that the system is running Ubuntu Server
+24.04 LTS, documenting the exact operating system release used for this coursework.
+
+### Week 1 Reflection
+
+This week focused on planning and documenting the system architecture and baseline
+configuration for the coursework. Establishing a clear separation between the
+workstation and server, along with a secure network design, provides a strong
+foundation for implementing security controls and monitoring in later weeks.
 
