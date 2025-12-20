@@ -10,8 +10,8 @@ isolated VirtualBox host-only network. All server administration is performed vi
 (port 22).
 
 This coursework uses a dual-system architecture consisting of a Linux Mint desktop
-workstation and an Ubuntu Server running headless without a graphical interface. The
-workstation is used for system administration and monitoring, while the server hosts
+workstation and an Ubuntu Server running headless without a graphical user interface.
+The workstation is used for system administration and monitoring, while the server hosts
 test applications and performance monitoring targets.
 
 Both systems are connected using a VirtualBox host-only network, providing an isolated
