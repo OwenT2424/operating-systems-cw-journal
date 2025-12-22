@@ -37,7 +37,7 @@ passwordless authentication is functioning correctly.
 
 The SSH configuration file was updated to disable root login and password-based
 authentication while enforcing key-based authentication. These changes reduce the risk
-of brute-force attacks and unauthorised access.
+of brute-force attacks and unauthorised access [2].
 
 <img width="402" height="41" alt="Screenshot 2025-12-21 060554" src="https://github.com/user-attachments/assets/1487d8a4-76c2-4553-ab32-b4b97ba2b55a" />
 
@@ -58,7 +58,7 @@ configuration updates.
 
 The UFW firewall was enabled to restrict inbound traffic to the Ubuntu Server. SSH access
 on port 22 was explicitly allowed to maintain secure remote administration, while all
-other inbound connections are denied by default.
+other inbound connections are denied by default [3].
 
 
 ## 3. User and Privilege Management
@@ -73,20 +73,21 @@ for administrative tasks.
 
 The newly created administrative user was added to the sudo group, granting controlled
 administrative privileges. This approach supports the principle of least privilege by
-separating standard user activity from administrative tasks.
+separating standard user activity from administrative tasks [1].
 
 ## 4. Automatic Security Updates
 
 <img width="681" height="84" alt="Screenshot 2025-12-21 063423" src="https://github.com/user-attachments/assets/714566c3-35bd-46e8-a4a9-461be7a6fb85" />
 
-Automatic security updates were enabled using unattended-upgrades. The system is now
+Automatic security updates were enabled using unattended-upgrades [1]. The system is now
 configured to automatically update package lists and apply security patches, reducing
 the risk of exposure to known vulnerabilities.
 
+### Week 4 reflection
 
 Week 4 focused on implementing core security controls on the Ubuntu Server. Secure
 remote access was established through SSH hardening, including the use of key-based
-authentication and the removal of password-based access. A host-based firewall was
+entication and the removal of password-based access. A host-based firewall was
 configured to restrict inbound network traffic while preserving secure administration.
 
 User and privilege management was improved by creating a separate administrative
@@ -98,6 +99,17 @@ These steps significantly reduced the system’s attack surface and aligned the 
 configuration with industry-standard security practices. The week reinforced the
 importance of applying changes incrementally and verifying system availability after
 each configuration step.
+
+## References
+
+[1]
+Ubuntu, “Security | Ubuntu,” Ubuntu, 2019. https://ubuntu.com/security
+
+‌[2]
+“sshd_config(5) - OpenBSD manual pages,” man.openbsd.org. https://man.openbsd.org/sshd_config
+
+‌[3]
+Ubuntu, “UFW - Community Help Wiki,” help.ubuntu.com, Sep. 27, 2023. https://help.ubuntu.com/community/UFW
 
 
 
