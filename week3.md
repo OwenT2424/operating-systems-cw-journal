@@ -5,7 +5,7 @@
 This week focuses on selecting applications that represent different workload types
 for performance evaluation on the Ubuntu Server. Each application is chosen to stress
 specific system resources, allowing operating system behaviour to be analysed under
-varying conditions.
+varying conditions. [1], [2], [3], [4]
 
 The selected applications will be used consistently in later performance testing and
 optimisation tasks to ensure meaningful comparison of results.
@@ -45,7 +45,7 @@ using SSH-based commands and scripts. Key metrics to be monitored include CPU us
 memory usage, disk I/O, and network activity.
 
 Standard Linux tools such as top, free, vmstat, iostat, and ifstat will be used to
-collect performance data during baseline and load-testing scenarios.
+collect performance data during baseline and load-testing scenarios [1], [2].
 
 ### Week 3 Reflection
 
@@ -54,5 +54,18 @@ operating system behaviour can vary significantly depending on resource demands.
 This planning ensures that later performance testing and optimisation will be
 meaningful and comparable across different scenarios.
 
+## References
+
+‌[1]
+Canonical, “Ubuntu Manpage: stress-ng - a tool to load and stress a computer system,” Ubuntu.com, 2021. https://manpages.ubuntu.com/manpages/jammy/man1/stress-ng.1.html (accessed Dec. 22, 2025).
+
+‌[2]
+“Welcome to FIO’s documentation! — fio 3.27 documentation,” Readthedocs.io, 2021. https://fio.readthedocs.io/en/latest/
+
+‌[3]
+“iPerf - iPerf3 and iPerf2 user documentation,” iperf.fr. https://iperf.fr/iperf-doc.php
+
+‌[4]
+“NGINX Documentation,” docs.nginx.com. https://docs.nginx.com/
 
 
