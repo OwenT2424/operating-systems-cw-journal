@@ -14,7 +14,7 @@ CPU, memory, disk, and network performance testing.
 
 A CPU stress test was performed using stress-ng to fully utilise available processor
 cores. Real-time monitoring showed sustained 100% CPU utilisation across all cores and
-increased system load during the test period.
+increased system load during the test period [1].
 
 
 ## 3. Memory Stress Test
@@ -24,7 +24,7 @@ increased system load during the test period.
 
 A memory stress test was conducted using stress-ng to apply memory pressure. Monitoring
 showed increased memory utilisation and minor swap usage during the test, while the
-system remained stable.
+system remained stable [1].
 
 ## 4. Disk I/O Stress Test
 
@@ -33,7 +33,7 @@ system remained stable.
 
 Disk I/O performance was evaluated using fio to generate sustained write operations.
 Monitoring showed increased disk activity and elevated I/O utilisation during the test,
-while the system remained stable.
+while the system remained stable [2].
 
 
 ## 5. Network Stress Test
@@ -42,16 +42,16 @@ while the system remained stable.
 <img width="789" height="467" alt="Screenshot 2025-12-22 074201" src="https://github.com/user-attachments/assets/3712332c-2ec2-4a55-a119-14549513e7be" />
 
 Network performance was tested using iperf3 to generate sustained traffic between the
-workstation and server. The results showed high network throughput throughout the test,
+workstation and server [3]. The results showed high network throughput throughout the test,
 demonstrating the system’s ability to handle network load under stress.
 
 ## 6. Performance Analysis
 
 Compared to baseline measurements collected in Week 5, stress testing resulted in
 significantly increased CPU utilisation, higher memory usage with minor swap activity,
-elevated disk I/O load, and substantially increased network throughput. Despite the
+elevated disk I/O load, and substantially increased network throughput [3]. Despite the
 increased demand on system resources, the server remained stable and responsive
-throughout all tests, indicating effective resource management under load.
+throughout all tests, indicating effective resource management under load [3].
 
 ## 7. Week 6 Reflection
 
@@ -63,3 +63,14 @@ insight into how system behaviour changes under load compared to baseline condit
 This week highlighted the importance of baseline measurements for meaningful
 performance analysis and demonstrated how real-time monitoring tools support the
 identification of potential performance bottlenecks and system limitations.
+
+## References
+
+[1]
+“Kernel/Reference/stress-ng - Ubuntu Wiki,” wiki.ubuntu.com. https://wiki.ubuntu.com/Kernel/Reference/stress-ng
+
+‌[2]
+“1. fio - Flexible I/O tester rev. 3.27 — fio 3.27-169-g1953e1-dirty documentation,” fio.readthedocs.io. https://fio.readthedocs.io/en/latest/fio_doc.html
+
+‌[3]
+B. Gregg, “Systems Performance 2nd Edition Book,” Brendangregg.com, 2025. https://www.brendangregg.com/systems-performance-2nd-edition-book.html
