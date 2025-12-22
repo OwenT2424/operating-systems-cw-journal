@@ -4,7 +4,7 @@
 
 This phase focuses on conducting a security audit and evaluating the overall system
 configuration of the Ubuntu Server. The audit assesses infrastructure security, network
-exposure, access control mechanisms, running services, and remaining security risks.
+exposure, access control mechanisms, running services, and remaining security risks [1].
 
 ## 2. Infrastructure Security Assessment (Lynis)
 
@@ -14,7 +14,7 @@ exposure, access control mechanisms, running services, and remaining security ri
 
 An initial security audit was conducted using Lynis to assess the baseline security posture
 of the Ubuntu Server. The audit completed 253 tests and produced a hardening index score
-of 63. Several configuration warnings and hardening suggestions were identified, which
+of 63 [1]. Several configuration warnings and hardening suggestions were identified, which
 will be addressed during the remediation phase to improve the overall security posture
 of the system.
 
@@ -58,8 +58,8 @@ firewall verification, positively improved the system’s security baseline.
 <img width="532" height="153" alt="Screenshot 2025-12-22 085026" src="https://github.com/user-attachments/assets/2dd587a9-fe1b-4dd5-8a79-25a61e522a44" />
 
 A network security assessment was performed using nmap to identify exposed services on
-the Ubuntu Server. The scan confirmed that only SSH (port 22) is accessible, with all
-other ports closed, indicating a minimal external attack surface.
+the Ubuntu Server [2]. The scan confirmed that only SSH (port 22) is accessible, with all
+other ports closed, indicating a minimal external attack surface [3].
 
 ## 4. Access Control Verification
 
@@ -88,13 +88,13 @@ system maintains a minimal and controlled service footprint.
 
 A system configuration review was conducted to evaluate core security-related settings
 on the Ubuntu Server. The operating system was confirmed to be a supported LTS release
-with automatic security updates enabled. SSH configuration enforces key-based
+with automatic security updates enabled [3]. SSH configuration enforces key-based
 authentication with root login and password authentication disabled. Firewall rules
 restrict inbound traffic to SSH only, and access control is managed through a dedicated
 administrative user with sudo privileges.
 
 Overall, the system configuration aligns with security best practices for a headless
-Linux server and supports a minimal, well-controlled attack surface.
+Linux server and supports a minimal, well-controlled attack surface [3].
 
 ## 7. Remaining Risk Assessment
 
@@ -109,8 +109,6 @@ exposure, strong access control policies, and ongoing monitoring. Regular securi
 reviews and audits would further reduce long-term risk as the system evolves.
 
 ## 8. Final Reflection
-
-## Final Reflection
 
 This project provided practical experience in deploying, securing, monitoring, and
 evaluating a Linux-based server environment using industry-standard tools and
@@ -134,6 +132,17 @@ Overall, this coursework strengthened both technical and analytical skills and i
 confidence in managing Linux servers in a secure and structured manner. The experience
 reflects real-world system administration practices and provides a solid foundation for
 future work in server management and cybersecurity.
+
+## References
+
+[1]
+CISOfy, “Lynis,” Cisofy.com, 2013. https://cisofy.com/lynis/
+
+‌[2]
+Nmap, “Chapter 15. Nmap reference guide | nmap network scanning,” Nmap.org, 2019. https://nmap.org/book/man.html
+
+‌[3]
+“Security Compliance & Certifications for 20.04,” Ubuntu. https://ubuntu.com/security/certifications/docs
 
 
 
