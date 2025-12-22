@@ -15,7 +15,7 @@ The workstation is used for system administration and monitoring, while the serv
 test applications and performance monitoring targets.
 
 Both systems are connected using a VirtualBox host-only network, providing an isolated
-private environment for secure SSH-based administration. This design reflects
+private environment for secure SSH-based administration [3]. This design reflects
 industry-standard practice in server and cloud environments, where headless systems
 are managed remotely to improve security and resource efficiency.
 
@@ -27,13 +27,13 @@ firewall rules, and performance monitoring in later weeks of the coursework.
 ### Server Distribution: Ubuntu Server
 
 Ubuntu Server was selected as the server operating system due to its stability,
-long-term support (LTS), and strong focus on headless server deployment. LTS releases
+long-term support (LTS), and strong focus on headless server deployment [1]. LTS releases
 receive security updates for up to five years, making them suitable for systems that
-require consistent configuration and maintenance over time.
+require consistent configuration and maintenance over time.[1]
 
 Ubuntu Server installs without a graphical interface by default, reducing resource
-consumption and minimising the system attack surface. This aligns with the coursework
-focus on security hardening, performance evaluation, and command-line administration.
+consumption and minimising the system attack surface [1]. This aligns with the coursework
+focus on security hardening, performance evaluation, and command-line administration.[1]
 
 In addition, Ubuntu Server is widely used in industry and cloud environments such as
 AWS and Microsoft Azure. This makes the skills developed during this coursework directly
@@ -61,7 +61,7 @@ support and strong community documentation.
 ### Workstation Distribution: Linux Mint
 
 Linux Mint was selected as the workstation operating system due to its stability,
-user-friendly desktop environment, and compatibility with Ubuntu-based systems.
+user-friendly desktop environment, and compatibility with Ubuntu-based systems [2].
 As Linux Mint uses the same package management system (`apt`), it simplifies remote
 administration, scripting, and monitoring tasks performed via SSH.
 
@@ -92,8 +92,8 @@ with the server console.
 
 Both the Linux Mint workstation and the Ubuntu Server were configured with two network
 adapters. The first adapter uses NAT to provide internet access for system updates and
-package installation. The second adapter uses a VirtualBox host-only network, creating a
-private and isolated network between the two virtual machines.
+package installation [3]. The second adapter uses a VirtualBox host-only network, creating a
+private and isolated network between the two virtual machines [3].
 
 This configuration allows secure communication between the workstation and server while
 ensuring all administration and testing remain contained within the virtual environment.
@@ -101,7 +101,7 @@ ensuring all administration and testing remain contained within the virtual envi
 <img width="1304" height="681" alt="Screenshot 2025-12-20 013735" src="https://github.com/user-attachments/assets/a9cfb0da-4d93-44ba-a333-86d98159848c" />
 
 The `ip addr` command was used on the Linux Mint workstation to display network
-interfaces and assigned IP addresses. The output shows two active interfaces: one
+interfaces and assigned IP addresses [4]. The output shows two active interfaces: one
 providing internet access via NAT and a second interface assigned a private IP address
 by the VirtualBox host-only network.
 
@@ -151,3 +151,16 @@ configuration for the coursework. Establishing a clear separation between the
 workstation and server, along with a secure network design, provides a strong
 foundation for implementing security controls and monitoring in later weeks.
 
+## References
+
+[1]
+“Introduction | Server documentation,” Ubuntu, 2024. https://ubuntu.com/server/docs
+
+‌[2]
+“Documentation - Linux Mint,” linuxmint.com. https://linuxmint.com/documentation.php
+
+‌[3]
+“Chapter 6. Virtual Networking,” Virtualbox.org, 2000. https://www.virtualbox.org/manual/ch06.html
+
+‌[4]
+“Linux man pages online,” man7.org. https://man7.org/linux/man-pages/index.html
