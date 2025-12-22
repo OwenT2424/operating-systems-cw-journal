@@ -27,7 +27,7 @@ The following tools were installed:
 <img width="669" height="67" alt="Screenshot 2025-12-22 061853" src="https://github.com/user-attachments/assets/a790bafa-18ed-4e96-bd1c-437a417e2083" />
 
 System monitoring tools were installed and verified on the Ubuntu Server to support
-real-time and historical analysis of CPU, memory, disk I/O, and network performance.
+real-time and historical analysis of CPU, memory, disk I/O, and network performance [2], [3].
 These tools will be used to establish baseline system metrics prior to stress testing.
 
 ## 3. Baseline System Information
@@ -38,7 +38,7 @@ These tools will be used to establish baseline system metrics prior to stress te
 
 CPU and kernel information was collected to document the system architecture and
 processing capabilities under idle conditions. This establishes a baseline for
-evaluating performance during later stress testing.
+evaluating performance during later stress testing [3].
 
 ### 3.2 Memory Baseline
 
@@ -499,7 +499,7 @@ A remote monitoring script (`monitor-server.sh`) was created on the Linux Mint
 workstation to collect performance metrics from the Ubuntu Server via SSH. The script
 performs a connectivity check and then gathers key performance indicators including
 uptime/load averages, CPU summary, memory usage, disk utilisation, process snapshots,
-and network interface information.
+and network interface information [1].
 
 To support non-interactive execution, key-based authentication was configured and an
 SSH host alias (`ubuntu-server`) was added in `~/.ssh/config`. This ensures the script
@@ -635,7 +635,7 @@ baseline reference for evaluating system behaviour during stress testing in late
 In addition to manual observation, baseline performance data can now be collected
 remotely and repeatably using the `monitor-server.sh` script. This ensures consistent
 baseline measurements over time and supports comparison against future stress-testing
-results.
+results [3].
 
 ## 9. Week 5 Reflection
 
@@ -656,4 +656,15 @@ improves consistency, reduces manual error, and supports long-term system analys
 
 Overall, this week reinforced the value of combining security controls with monitoring
 and automation to create a maintainable, auditable, and resilient server environment.
+
+## References
+
+[1]
+“The /proc Filesystem — The Linux Kernel documentation,” Kernel.org, 2024. https://www.kernel.org/doc/html/latest/filesystems/proc.html
+
+[2]
+“htop(1) - Linux manual page,” Man7.org, 2019. https://man7.org/linux/man-pages/man1/htop.1.html
+
+[3]
+“Sysstat Home Page,” Github.io, 2025. https://sysstat.github.io/
 
