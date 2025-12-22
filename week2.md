@@ -5,9 +5,9 @@
 This section defines the performance testing approach that will be used later in the
 coursework to evaluate system behaviour under different workloads. Performance testing
 will be conducted remotely from the Linux Mint workstation using SSH-based monitoring
-tools and scripts.
+tools and scripts [1].
 
-Key performance metrics to be monitored include CPU usage, memory usage, disk activity,
+Key performance metrics [2] to be monitored include CPU usage, memory usage, disk activity,
 and network utilisation. These metrics will be collected during baseline operation and
 while test applications are running on the Ubuntu Server.
 
@@ -50,7 +50,7 @@ and best practice for securing Linux server environments.
 ## 3. Threat Model and Mitigation Strategies
 
 This threat model identifies key security threats relevant to the coursework system and
-outlines planned mitigation strategies.
+outlines planned mitigation strategies [3].
 
 | Threat | Description | Planned Mitigation |
 |------|------------|-------------------|
@@ -70,3 +70,15 @@ Creating a performance testing plan alongside the security checklist helped esta
 clear objectives for future monitoring and evaluation. This planning ensures that later
 security implementations and performance tests are purposeful, measurable, and aligned
 with identified risks rather than applied arbitrarily.
+
+## References
+
+[1]
+“OpenSSH: Manual Pages,” www.openssh.com. https://www.openssh.com/manual.html
+
+‌[2]
+Ubuntu, “Security | Ubuntu,” Ubuntu, 2019. https://ubuntu.com/security
+
+‌[3]
+NIST, “Guide for conducting risk assessments,” Guide for Conducting Risk Assessments, vol. 1, Sep. 2012, doi: https://doi.org/10.6028/nist.sp.800-30r1
+
